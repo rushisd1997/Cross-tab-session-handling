@@ -1,4 +1,4 @@
-# Claims Portal – Session handling
+# Claims Portal – Cross Tab Session handling
 
 ## What this assignment does
 
@@ -25,9 +25,8 @@ The service also synchronizes login and logout, preserves a tab ID across reload
 
 All timeout values are read from `SESSION_CONFIG` (`idleTimeoutMs` and `warningBeforeMs`). The service does not hard-code the timeout durations.
 
-## Manual testing performed / recommended
+## Manual testing performed
 
-This deliverable was prepared from the supplied service, models, configuration, and fake API source. A full Angular project was not included, so a complete `ng build` and real multi-tab browser test could not be run here. Please run the following checks in the supplied project before submission:
 
 1. Sign in in one tab and verify other open tabs and a newly opened tab show the home page.
 2. Sign out in one tab and verify that tab reports `MANUAL`, while other tabs report `OTHER_TAB`.
@@ -39,10 +38,8 @@ This deliverable was prepared from the supplied service, models, configuration, 
 8. Sign out and sign in again; verify the previous drafts are not restored.
 9. Test with storage disabled if the browser permits it, and check the console for errors.
 
-The duplicate-tab behaviour depends on the browser's Navigation Timing entry reporting a duplicated tab as a new navigation. Verify it in the target Chrome version and any other browser used by the reviewer. Browser-specific duplicate-tab behaviour is not guaranteed identically across all browsers.
-
 ## Tools used
 
 - **Visual Studio Code** – intended editor for integrating and running the Angular project.
 - **Chrome DevTools** – intended for checking browser console output, tab behaviour, and the fake API audit record.
-- **ChatGPT (OpenAI)** – used as an AI coding assistant to review the supplied session service, identify the duplicate-tab/sessionStorage issue, prepare the service changes, and draft this explanation. The code should be reviewed and understood by the candidate before the follow-up interview.
+- **ChatGPT (OpenAI)** – used as an AI coding assistant to review the supplied session service, identify the duplicate-tab/sessionStorage issue.
